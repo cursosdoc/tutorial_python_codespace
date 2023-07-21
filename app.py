@@ -39,7 +39,10 @@ def contar_frutas(color):
     lista_filtrada = filtar_lista(filas_csv, 1, color)
     lista_filtrada = filtar_lista(lista_filtrada, 2, porte_esperado)
 
-    return f"Total {len(filas_csv)}, color {color} y porte {porte_esperado} = {len(lista_filtrada)}"
+    return (
+        f"Total {len(filas_csv)}, color {color}"
+        + " y porte {porte_esperado} = {len(lista_filtrada)}"
+    )
 
 
 @app.route("/agregar_fruta", methods=["POST"])
@@ -56,6 +59,7 @@ def agregar_fruta():
 def reporte_frutas():
     encabezados, filas_csv = cargar_filas_base_datos()
     html = flask.render_template(
-        "plantilla_reporte_frutas.html", encabezados=encabezados, filas=filas_csv
+        "plantilla_reporte_frutas.html",
+        encabezados=encabezados, filas=filas_csv
     )
     return html
