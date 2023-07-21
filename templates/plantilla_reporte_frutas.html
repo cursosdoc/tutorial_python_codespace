@@ -1,0 +1,14 @@
+<table border='1' style='border-collapse:collapse'>
+    <tr>
+        <th>{{encabezados[0]}}</th>
+        <th>{{encabezados[1]}}</th>
+        <th>{{encabezados[2]}}</th>
+    </tr>
+    {% for fila in filas %}
+    <TR>
+       <TD>{{fila[0]}}</TD>
+       <TD>{{fila[1]}}</TD>
+       <TD>{{fila[2]}}</TD>
+    </TR>
+    {% endfor %}
+</table>

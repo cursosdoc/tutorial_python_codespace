@@ -1,5 +1,4 @@
 # Mi proyecto
 
-Mi proyecto de ejemplo
-
-- Cambio agregado a traves de Spaces
+Este proyecto permite gestionar una base de datos de frutas, es necesario crear
+el archivo 'frutas.csv'.
